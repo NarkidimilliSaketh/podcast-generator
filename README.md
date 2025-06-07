@@ -99,12 +99,3 @@ Major areas needing contribution:
 
 Developed by [Saketh Narkidimilli](https://github.com/NarkidimilliSaketh) 🚀
 ```
-
-### Notes:
-1. You should replace placeholder content (like sample links or TTS provider) with actual details from your project
-2. Add installation requirements if you have specific version dependencies
-3. Include screenshots/demo GIFs for better visual representation
-4. Add a "Roadmap" section if you have planned features
-5. Consider adding a "Troubleshooting" section for common issues
-
-Would you like me to modify any particular section or add more specific details about your implementation?
