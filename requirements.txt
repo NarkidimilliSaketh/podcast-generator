@@ -1,0 +1,6 @@
+Flask
+python-dotenv
+google-generativeai
+gTTS
+pdfplumber
+Werkzeug
