@@ -1,101 +1,71 @@
-Here's a comprehensive `README.md` file for your **Podcast Generator** repository:
+Podcast Generator
+An AI-powered podcast generator that creates podcast episodes from text content using OpenAI's GPT and text-to-speech technologies.
 
-```markdown
-# Podcast Generator 🎙️
+Features
+AI-Powered Content Generation: Uses OpenAI's GPT models to generate podcast scripts from text inputs
 
-A Python-based tool to generate AI-powered podcast episodes from text inputs, featuring customizable hosts, topics, and realistic voice synthesis.
+Text-to-Speech Conversion: Converts generated scripts into natural-sounding audio using OpenAI's TTS
 
-![Podcast Illustration](https://via.placeholder.com/800x400.png?text=Podcast+Generator) *(Consider adding a relevant image or demo GIF here)*
+Background Music Integration: Automatically adds background music to enhance the listening experience
 
-## Features ✨
+Web Interface: User-friendly web application built with Streamlit
 
-- Generate podcast episodes from text prompts
-- Customizable host personas (age, tone, style)
-- Multi-host conversation simulations
-- Text-to-speech with realistic AI voices
-- Export as audio files (MP3/WAV) or text transcripts
-- Topic-based episode structuring
-- CLI and potential web interface support
+Audio File Management: Downloads and manages generated podcast episodes
 
-## Installation 🛠️
+Installation
+Clone the repository:
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/NarkidimilliSaketh/podcast-generator.git
-   cd podcast-generator
-   ```
+bash
+git clone https://github.com/NarkidimilliSaketh/podcast-generator.git
+cd podcast-generator
+Install the required dependencies:
 
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+bash
+pip install -r requirements.txt
+Set up your OpenAI API key:
 
-3. Set up API keys (if using external TTS services):
-   ```bash
-   cp .env.example .env
-   # Edit .env with your API keys
-   ```
+Create a .env file in the root directory
 
-## Usage 🚀
+Add your OpenAI API key: OPENAI_API_KEY=your_api_key_here
 
-### Basic Generation:
-```bash
-python generate_podcast.py --topic "Future of AI" --hosts 2 --length 10
-```
+Usage
+Run the Streamlit application:
 
-### Advanced Options:
-```bash
-python generate_podcast.py \
-  --topic "Renewable Energy Innovations" \
-  --hosts "young_enthusiast,old_expert" \
-  --style "debate" \
-  --output_format "mp3" \
-  --length 15
-```
+bash
+streamlit run app.py
+Open your web browser and navigate to the local URL shown in the terminal (typically http://localhost:8501)
 
-### Python API:
-```python
-from podcast_generator import PodcastGenerator
+Enter your podcast topic or text content in the input field
 
-pg = PodcastGenerator()
-episode = pg.generate(
-    topic="Space Exploration",
-    hosts=["optimist", "skeptic"],
-    duration=8  # minutes
-)
-episode.export("space_podcast.mp3")
-```
+Click the "Generate Podcast" button
 
-## Configuration ⚙️
+Wait for the generation process to complete (this may take a few minutes)
 
-Modify `config/settings.yaml` to:
-- Add custom host personas
-- Adjust conversation styles
-- Set default audio parameters
-- Configure output formats
+Download your generated podcast episode using the provided download link
 
+Configuration
+The application can be configured through the following environment variables:
 
+OPENAI_API_KEY: Your OpenAI API key (required)
 
-## Contributing 🤝
+MODEL_NAME: The GPT model to use (default: "gpt-3.5-turbo")
 
-Contributions welcome! Please:
-1. Fork the repository
-2. Create a feature branch
-3. Submit a PR with clear documentation
+TTS_MODEL: The text-to-speech model to use (default: "tts-1")
 
-Major areas needing contribution:
-- Additional TTS integrations
-- Host persona expansions
-- Better conversation dynamics
-- Web interface development
+TTS_VOICE: The voice to use for TTS (default: "alloy")
 
+Project Structure
+text
+podcast-generator/
+├── app.py                 # Main Streamlit application
+├── requirements.txt       # Python dependencies
+├── README.md             # This file
+└── .gitignore           # Git ignore rules
+Dependencies
+streamlit: Web application framework
 
-## Acknowledgements 🙏
+openai: OpenAI API client for GPT and TTS
 
-- Inspired by various AI content generation tools
-- Built with Python ecosystem tools
+python-dotenv: Environment variable management
 
----
-
-Developed by [Saketh Narkidimilli](https://github.com/NarkidimilliSaketh) 🚀
-```
+requests: HTTP requests for file downloads
